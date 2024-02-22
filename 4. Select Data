@@ -41,3 +41,14 @@ import pandas as pd
 def selectData(students: pd.DataFrame) -> pd.DataFrame:
     students = students[students['student_id']==101]
     return students[['name','age']]
+
+
+Let's break down the line result = df[df['A'] > 2] step by step:
+
+df['A']: This part selects the column 'A' from the DataFrame df.
+
+df['A'] > 2: This creates a boolean mask where each element of the column 'A' is compared to 2. If the value is greater than 2, it will be True; otherwise, it will be False. This results in a boolean array indicating for each row whether the condition df['A'] > 2 is true or false.
+
+df[df['A'] > 2]: This uses the boolean mask generated in the previous step to filter rows from the DataFrame df. Only the rows where the condition df['A'] > 2 is True will be selected. In other words, it selects only those rows where the value in column 'A' is greater than 2.
+
+result = df[df['A'] > 2]: Finally, the selected rows are assigned to the variable result.
